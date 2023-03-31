@@ -1,0 +1,21 @@
+.t-start-page {
+  height: 100vh;
+  width: 100vw;
+  padding: 0 3%;
+
+  background-image: url(./ui/assets/images/universe-background.image.jpg);
+  background-size: cover;
+}
+
+header {
+  &::after {
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgb(0, 0, 0, 0.7);
+  }
+}

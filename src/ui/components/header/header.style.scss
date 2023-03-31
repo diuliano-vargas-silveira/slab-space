@@ -1,0 +1,31 @@
+@import '../../style/colors.scss';
+
+$highlight-color: map-get($white, 500);
+
+.c-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 20px;
+
+  &__menu {
+    display: flex;
+    align-items: center;
+
+    &__link {
+      text-decoration: none;
+      margin-right: 16px;
+
+      color: map-get($grey, 600);
+
+      &:hover {
+        color: $highlight-color;
+      }
+    }
+
+    > .--active {
+      color: $highlight-color;
+    }
+  }
+}
