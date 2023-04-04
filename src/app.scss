@@ -1,21 +1,84 @@
+@import './ui/style/font.style.scss';
+@import './ui/style/colors.style.scss';
+
+@mixin default-title-style() {
+  font-family: $venus-risign;
+  font-size: $font-48px;
+
+  background: linear-gradient(90deg, map-get($grey, 200), map-get($grey, 500));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin default-text-style() {
+  font-family: sans-serif;
+  font-size: $font-14px;
+  color: map-get($grey, 600);
+}
+
 .t-start-page {
   height: 100vh;
   width: 100vw;
   padding: 0 3%;
 
-  background-image: url(./ui/assets/images/universe-background.image.jpg);
+  background-image: url(./ui/assets/images/universe-background.image.jpeg);
   background-size: cover;
-}
 
-header {
-  &::after {
-    z-index: 1;
-    top: 0;
-    left: 0;
+  overflow-x: hidden;
 
-    width: 100vw;
+  &__presentation {
+    position: relative;
     height: 100vh;
 
-    background-color: rgb(0, 0, 0, 0.7);
+    padding-top: 60px;
+
+    &__title {
+      @include default-title-style();
+
+      max-width: 800px;
+    }
+
+    &__text {
+      @include default-text-style();
+
+      margin-top: 12px;
+      max-width: 400px;
+    }
+
+    &__spaceship {
+      position: absolute;
+      z-index: 1;
+
+      animation-name: spaceship-fly;
+      animation-duration: 2s;
+      animation-timing-function: ease-out;
+
+      width: 560px;
+      top: 160px;
+      left: 25%;
+    }
+
+    &__buttons {
+      margin-top: 24px;
+      display: flex;
+    }
+
+    &__button {
+      margin-right: 12px;
+    }
+  }
+}
+
+@keyframes spaceship-fly {
+  0% {
+    width: 20px;
+    top: 520px;
+    left: 0;
+  }
+
+  100% {
+    width: 560px;
+    top: 160px;
+    left: 25%;
   }
 }

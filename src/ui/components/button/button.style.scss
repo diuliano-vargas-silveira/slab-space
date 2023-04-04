@@ -1,0 +1,39 @@
+@import '../../style/colors.style.scss';
+@import '../../style/font.style.scss';
+
+.c-button {
+  display: flex;
+  align-items: center;
+  padding: 8px 18px;
+
+  font-size: $font-12px;
+  color: map-get($grey, 300);
+
+  background-color: map-get($grey, 900);
+  border: 1px solid map-get($grey, 700);
+  border-radius: 4px;
+
+  &__suffix-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 8px;
+    border-radius: 4px;
+    padding: 4px;
+
+    background-color: map-get($grey, 700);
+
+    &__icon {
+      width: 8px;
+      height: 8px;
+    }
+
+    &__text {
+      margin-left: 4px;
+      font-size: $font-12px;
+
+      color: map-get($grey, 100);
+    }
+  }
+}

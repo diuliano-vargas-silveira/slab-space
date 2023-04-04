@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 import { iconSlabSpace } from '../../assets'
 import { LINKS } from '../../constants/routes.constants'
+import { Button } from '../'
 
 import './header.style.scss'
 
@@ -34,7 +35,7 @@ const Header = () => {
 
       <nav className="c-header__menu">{renderMenu()}</nav>
 
-      <a href="./">Explore</a>
+      <Button onClick={() => {}}>Lets Explore!</Button>
     </header>
   )
 }

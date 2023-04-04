@@ -1,0 +1,20 @@
+@import './font.style.scss';
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+
+@font-face {
+  font-family: $venus-risign;
+  src: url(../assets/fonts/venusrisingrg.otf) format('opentype');
+}
+
+html {
+  font-family: sans-serif, $venus-risign;
+  -webkit-text-size-adjust: 100%;
+}
