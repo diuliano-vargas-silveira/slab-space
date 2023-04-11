@@ -1,13 +1,35 @@
 import { Header } from './ui/components/header/header.component'
-import { iconRocket } from './ui/assets'
+import { Button } from './ui/components'
+import { iconMouse, iconRocket } from './ui/assets'
+import { createArrayWithCheckPoints } from './ui/utils/create-array.utils'
+import { MEDIA_INFOS } from './ui/constants'
 
 import './app.scss'
-import { Button } from './ui/components'
+
+const LENGTH_RULER = 18
+const CHECKPOINTS = [
+  { position: 1, value: 50 },
+  { position: 9, value: 60 },
+  { position: 17, value: 70 },
+]
+const RULER = createArrayWithCheckPoints(LENGTH_RULER, CHECKPOINTS)
 
 function App() {
-  // const renderRuler = () => {
-  //   return <div className="t-start-page__presentation__ruler"></div>
-  // }
+  const renderRuler = () => (
+    <span className="t-start-page__presentation__ruler">
+      {RULER.map(ruler => {
+        const activatedClassName = ruler !== '' ? '--active' : ''
+
+        return (
+          <span
+            className={`t-start-page__presentation__metric${activatedClassName}`}
+          >
+            {ruler}
+          </span>
+        )
+      })}
+    </span>
+  )
 
   return (
     <div className="t-start-page">
@@ -27,12 +49,36 @@ function App() {
           </Button>
           <Button suffix="A">Get Ticket</Button>
         </div>
+        <footer className="t-start-page__presentation__infos">
+          <span className="t-start-page__presentation__scroll">
+            <img
+              src={iconMouse}
+              alt="Mouse scroll"
+              className="t-start-page__presentation__scroll-icon"
+            />
+            <p>
+              Scroll to <strong> Explore</strong>
+            </p>
+          </span>
+
+          <div className="t-start-page__presentation__social">
+            <span className="t-start-page__presentation__follow-more">
+              Follow More
+            </span>
+            <div className="t-start-pafe__presentation__social-medias">
+              {Object.values(MEDIA_INFOS).map(({ name, url }) => (
+                <a href={url}>{name}</a>
+              ))}
+            </div>
+          </div>
+        </footer>
 
         <img
           src={iconRocket}
           alt="a spaceship, flying in the space!"
           className="t-start-page__presentation__spaceship"
         />
+        {renderRuler()}
       </section>
     </div>
   )
