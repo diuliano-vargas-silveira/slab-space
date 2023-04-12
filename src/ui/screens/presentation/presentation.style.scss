@@ -1,0 +1,190 @@
+@import '../../style/font.style.scss';
+@import '../../style/colors.style.scss';
+
+@mixin default-title-style() {
+  font-family: $venus-risign;
+  font-size: $font-48px;
+
+  background: linear-gradient(90deg, map-get($grey, 200), map-get($grey, 500));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin default-text-style() {
+  font-family: sans-serif;
+  font-size: $font-14px;
+  color: map-get($grey, 600);
+}
+
+.t-start-page__presentation {
+  position: relative;
+  z-index: 1;
+  padding-top: 60px;
+
+  &__title {
+    @include default-title-style();
+
+    max-width: 800px;
+  }
+
+  &__text {
+    @include default-text-style();
+
+    margin-top: 12px;
+    max-width: 400px;
+  }
+
+  &__spaceship {
+    position: absolute;
+    z-index: 0;
+
+    animation-name: spaceship-fly;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+
+    width: 560px;
+    top: 160px;
+    left: 25%;
+  }
+
+  &__buttons {
+    margin-top: 24px;
+    display: flex;
+  }
+
+  &__button {
+    margin-right: 12px;
+  }
+
+  &__button-ticket {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__infos {
+    padding-top: 17%;
+    padding-bottom: 8px;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-end;
+
+    color: map-get($white, 500);
+  }
+
+  &__scroll-icon {
+    fill: map-get($white, 500);
+    width: 15px;
+    margin-right: 4px;
+  }
+
+  &__scroll {
+    display: flex;
+    align-items: center;
+    font-size: $font-12px;
+
+    > p {
+      font-weight: 200;
+    }
+  }
+
+  &__follow-more {
+    font-size: $font-14px;
+    font-weight: 200;
+  }
+
+  &__social-medias {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 8px;
+  }
+
+  &__social-link {
+    font-size: $font-12px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    color: map-get($grey, 400);
+
+    &::after {
+      content: '';
+
+      display: flex;
+      border-radius: 2px;
+      width: 4px;
+      height: 4px;
+      margin-left: 12px;
+
+      background-color: map-get($white, 500);
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+
+    &:not(:first-child) {
+      margin-left: 12px;
+    }
+
+    &:hover {
+      color: map-get($white, 500);
+    }
+  }
+
+  &__ruler {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    height: 80%;
+
+    display: grid;
+    grid-template-rows: repeat(18, 1fr);
+  }
+
+  &__metric {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    &--active {
+      display: flex;
+      align-items: center;
+
+      font-size: $font-12px;
+      font-weight: 200;
+      color: map-get($white, 500);
+
+      &::after {
+        content: '';
+        margin-left: 8px;
+        height: 1px;
+        width: 40px;
+        background-color: map-get($white, 500);
+      }
+    }
+
+    &::after {
+      content: '';
+      height: 1px;
+      width: 20px;
+      background-color: map-get($grey, 700);
+    }
+  }
+}
+
+@keyframes spaceship-fly {
+  0% {
+    width: 20px;
+    top: 520px;
+    left: 0;
+  }
+
+  100% {
+    width: 560px;
+    top: 160px;
+    left: 25%;
+  }
+}

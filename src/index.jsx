@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider } from 'react-router-dom'
-import { routerCreate } from './ui/utils/'
+import { routerCreate } from './utils'
 
 import './ui/style/index.style.scss'
 

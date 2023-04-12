@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 import { iconSlabSpace } from '../../assets'
-import { LINKS } from '../../constants'
+import { LINKS } from '../../../constants'
 import { Button } from '../'
 
 import './header.style.scss'
