@@ -65,9 +65,16 @@ function App() {
             <span className="t-start-page__presentation__follow-more">
               Follow More
             </span>
-            <div className="t-start-pafe__presentation__social-medias">
+            <div className="t-start-page__presentation__social-medias">
               {Object.values(MEDIA_INFOS).map(({ name, url }) => (
-                <a href={url}>{name}</a>
+                <a
+                  className="t-start-page__presentation__social-link"
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {name}
+                </a>
               ))}
             </div>
           </div>

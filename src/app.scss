@@ -28,6 +28,7 @@
 
   &__presentation {
     position: relative;
+    z-index: 1;
     padding-top: 60px;
 
     &__title {
@@ -45,7 +46,7 @@
 
     &__spaceship {
       position: absolute;
-      z-index: 1;
+      z-index: 0;
 
       animation-name: spaceship-fly;
       animation-duration: 2s;
@@ -101,7 +102,41 @@
       display: flex;
       justify-content: space-between;
 
-      margin-top: 12px;
+      margin-top: 8px;
+    }
+
+    &__social-link {
+      font-size: $font-12px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      color: map-get($grey, 400);
+
+      &::after {
+        content: '';
+
+        display: flex;
+        border-radius: 2px;
+        width: 4px;
+        height: 4px;
+        margin-left: 12px;
+
+        background-color: map-get($white, 500);
+      }
+
+      &:last-child::after {
+        display: none;
+      }
+
+      &:not(:first-child) {
+        margin-left: 12px;
+      }
+
+      &:hover {
+        color: map-get($white, 500);
+      }
     }
 
     &__ruler {

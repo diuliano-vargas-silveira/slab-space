@@ -8,6 +8,7 @@
 
   font-size: $font-12px;
   color: map-get($grey, 300);
+  cursor: pointer;
 
   background-color: map-get($grey, 900);
   border: 1px solid map-get($grey, 700);
@@ -35,5 +36,9 @@
 
       color: map-get($grey, 100);
     }
+  }
+
+  &:hover {
+    background-color: map-get($grey, 700);
   }
 }
