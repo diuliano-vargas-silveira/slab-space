@@ -1,0 +1,17 @@
+@import './font.style.scss';
+@import './colors.style.scss';
+
+@mixin default-title-style() {
+  font-family: $venus-risign;
+  font-size: $font-48px;
+
+  background: linear-gradient(90deg, map-get($grey, 200), map-get($grey, 600));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin default-text-style() {
+  font-family: sans-serif;
+  font-size: $font-14px;
+  color: map-get($grey, 600);
+}

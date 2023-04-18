@@ -1,5 +1,5 @@
 import { Header } from './ui/components'
-import { Presentation } from './ui/screens'
+import { Explore, Presentation } from './ui/screens'
 
 import './app.scss'
 
@@ -8,6 +8,7 @@ function App() {
     <div className="t-start-page">
       <Header />
       <Presentation />
+      <Explore />
     </div>
   )
 }
