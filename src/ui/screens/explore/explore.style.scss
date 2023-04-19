@@ -10,11 +10,16 @@
 }
 
 .t-explore {
-  margin-top: 40px;
+  margin-top: 80px;
 
   &__satellite {
     display: flex;
     justify-content: space-between;
+
+    &__image {
+      margin-top: 160px;
+      width: 450px;
+    }
   }
 
   &__explain {
@@ -24,14 +29,20 @@
     }
 
     &__quote-phrase {
+      margin-top: 80px;
       max-width: 400px;
       @include default-quote-phrase-style();
+    }
+
+    &__button {
+      margin-top: 16px;
     }
   }
 
   &__earth {
     width: 100%;
     position: relative;
+    margin-top: 200px;
 
     display: flex;
     flex-direction: column;
@@ -61,8 +72,17 @@
 
     &__image {
       position: absolute;
-      top: -120px;
+      top: -280px;
       right: -9%;
+    }
+
+    &__buttons {
+      display: flex;
+      margin-top: 16px;
+    }
+
+    &__button:first-child {
+      margin-right: 16px;
     }
   }
 }

@@ -14,7 +14,7 @@ const Explore = () => {
         />
         <div className="t-explore__explain">
           <span className="t-explore__explain__topic">
-            -Explore more universes.
+            - Explore more universes.
           </span>
           <p className="t-explore__explain__quote-phrase">
             "Many go beyond the incredible technological advances that allow you
@@ -42,11 +42,11 @@ const Explore = () => {
           className="t-explore__earth__image"
         />
         <footer className="t-explore__earth__buttons">
-          <Button className="t-explore__explain__button" suffix="O">
-            Readmore
+          <Button className="t-explore__earth__button" suffix="O">
+            Explore Universe
           </Button>
-          <Button className="t-explore__explain__button" suffix="A">
-            Readmore
+          <Button className="t-explore__earth__button" suffix="A">
+            Learn More
           </Button>
         </footer>
       </section>
