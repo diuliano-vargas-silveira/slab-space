@@ -1,5 +1,5 @@
 import { Header } from './ui/components'
-import { Explore, Presentation } from './ui/screens'
+import { Explore, Moon, Presentation } from './ui/screens'
 
 import './app.scss'
 
@@ -9,6 +9,7 @@ function App() {
       <Header />
       <Presentation />
       <Explore />
+      <Moon />
     </div>
   )
 }
