@@ -23,12 +23,31 @@ const Moon = () => {
           alt="The moon, our satellite"
           className="t-moon__section__image"
         />
-        <h2 className="t-moon__section__title">
-          JOIN OTHERS TO EXPERIENCE AN EXTRAORDINARY GALAXY
-        </h2>
-        <Button className="t-moon__section__button">
-          First Person - Its Free Now
-        </Button>
+        <section className="t-moon__section__text">
+          <h2 className="t-moon__section__title">
+            JOIN OTHERS TO EXPERIENCE AN EXTRAORDINARY GALAXY
+          </h2>
+          <Button className="t-moon__section__button">
+            First Person - Its Free Now
+          </Button>
+          <footer className="t-moon__footer">
+            <nav className="t-moon__footer__links">
+              <a href="/" className="t-moon__footer__link">
+                Privacy policy
+              </a>
+              <a href="/" className="t-moon__footer__link">
+                Sitemap
+              </a>
+              <a href="/" className="t-moon__footer__link">
+                Terms of Use
+              </a>
+            </nav>
+
+            <h2 className="t-moon__footer__all-rights">
+              Slab Space@ 2021-2022, All Rights Reserved
+            </h2>
+          </footer>
+        </section>
       </section>
     </section>
   )
