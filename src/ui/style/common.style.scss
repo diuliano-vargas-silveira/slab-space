@@ -15,3 +15,10 @@
   font-size: $font-14px;
   color: map-get($grey, 600);
 }
+
+@mixin default-quote-phrase-style {
+  font-size: $font-24px;
+  background: linear-gradient(90deg, map-get($grey, 200), map-get($grey, 600));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

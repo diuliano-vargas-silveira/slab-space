@@ -2,15 +2,8 @@
 @import '../../style/colors.style.scss';
 @import '../../style/common.style.scss';
 
-@mixin default-quote-phrase-style {
-  font-size: $font-24px;
-  background: linear-gradient(90deg, map-get($grey, 200), map-get($grey, 600));
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 .t-explore {
-  margin-top: 80px;
+  margin-top: 200px;
 
   &__satellite {
     display: flex;
@@ -22,21 +15,8 @@
     }
   }
 
-  &__explain {
-    &__topic {
-      font-size: $font-14px;
-      color: map-get($grey, 600);
-    }
-
-    &__quote-phrase {
-      margin-top: 80px;
-      max-width: 400px;
-      @include default-quote-phrase-style();
-    }
-
-    &__button {
-      margin-top: 16px;
-    }
+  &__quote {
+    max-width: 400px;
   }
 
   &__earth {

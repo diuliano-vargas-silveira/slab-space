@@ -4,9 +4,37 @@
 
 .t-moon {
   margin-top: 320px;
+  position: relative;
+
+  &__topic {
+    font-size: $font-14px;
+    color: map-get($grey, 600);
+  }
+
+  &__rocket {
+    display: flex;
+    justify-content: space-between;
+
+    &__quote {
+      max-width: 400px;
+    }
+
+    &__image {
+      width: 50%;
+      transform: rotate(180deg);
+    }
+  }
 
   &__section {
+    margin-top: 400px;
     &__image {
+      position: absolute;
+      z-index: 1;
+
+      width: 105vw;
+      height: 100vh;
+      left: -8%;
+      top: 600px;
     }
   }
 }

@@ -1,17 +1,22 @@
-import { imageMoon } from '../../assets'
-import { Button } from '../../components'
+import { iconRocket, imageMoon } from '../../assets'
+import { Button, QuoteContainer } from '../../components'
 
 import './moon.style.scss'
 
 const Moon = () => {
   return (
     <section className="t-moon">
-      <span className="t-moon__topic">- Explore more universes.</span>
-      <p className="t-moon__quote-phrase">
-        " You can be an astronaut, which focuses on stars, binoculars, galaxies
-        and the universe. "
-      </p>
-      <Button className="t-moon__button">Readmore</Button>
+      <section className="t-moon__rocket">
+        <QuoteContainer className="t-moon__rocket__quote">
+          " You can be an astronàut, which focuses on stars, binoculars,
+          galaxies and the universe. "
+        </QuoteContainer>
+        <img
+          className="t-moon__rocket__image"
+          src={iconRocket}
+          alt="a spaceship, flying in the space!"
+        />
+      </section>
       <section className="t-moon__section">
         <img
           src={imageMoon}

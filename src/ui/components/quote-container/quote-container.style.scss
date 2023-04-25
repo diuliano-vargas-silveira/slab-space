@@ -1,0 +1,19 @@
+@import '../../style/font.style.scss';
+@import '../../style/colors.style.scss';
+@import '../../style/common.style.scss';
+
+.c-quote-container {
+  &__topic {
+    font-size: $font-14px;
+    color: map-get($grey, 600);
+  }
+
+  &__quote-phrase {
+    margin-top: 80px;
+    @include default-quote-phrase-style();
+  }
+
+  &__button {
+    margin-top: 16px;
+  }
+}

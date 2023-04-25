@@ -1,4 +1,4 @@
-import { Button } from '../../components'
+import { Button, QuoteContainer } from '../../components'
 import { iconAstronaut, iconEarth, imageSatellite } from '../../assets'
 
 import './explore.style.scss'
@@ -12,16 +12,10 @@ const Explore = () => {
           alt="Satellite showing a part of earth in your mirror."
           className="t-explore__satellite__image"
         />
-        <div className="t-explore__explain">
-          <span className="t-explore__explain__topic">
-            - Explore more universes.
-          </span>
-          <p className="t-explore__explain__quote-phrase">
-            "Many go beyond the incredible technological advances that allow you
-            to see them in real time. "
-          </p>
-          <Button className="t-explore__explain__button">Readmore</Button>
-        </div>
+        <QuoteContainer className="t-explore__quote">
+          "Many go beyond the incredible technological advances that allow you
+          to see them in real time. "
+        </QuoteContainer>
       </section>
       <section className="t-explore__earth">
         <p className="t-explore__earth__quote-phrase">
