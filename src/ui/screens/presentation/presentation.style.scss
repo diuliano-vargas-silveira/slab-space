@@ -5,7 +5,14 @@
 .t-start-page__presentation {
   position: relative;
   z-index: 1;
-  padding-top: 60px;
+  padding-top: 6%;
+
+  height: 90vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   &__title {
     @include default-title-style();
@@ -48,7 +55,6 @@
   }
 
   &__infos {
-    padding-top: 17%;
     padding-bottom: 8px;
     display: flex;
 

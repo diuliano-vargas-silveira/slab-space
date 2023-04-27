@@ -27,6 +27,10 @@
 
   &__section {
     margin-top: 400px;
+    height: 78vh;
+    display: flex;
+    align-items: flex-end;
+
     &__image {
       position: absolute;
       z-index: 1;
@@ -45,7 +49,6 @@
       align-items: center;
 
       width: 100%;
-      margin-top: 600px;
     }
 
     &__title {
@@ -64,7 +67,7 @@
     justify-content: space-between;
 
     width: 100%;
-    margin-top: 120px;
+    margin-top: 15%;
     color: map-get($grey, 400);
 
     &__links {
@@ -80,6 +83,46 @@
     &__all-rights {
       font-size: $font-16px;
       font-weight: 400;
+    }
+  }
+
+  @media (max-width: 1780px) {
+    &__section {
+      height: 70vh;
+    }
+  }
+
+  @media (max-width: 1550px) {
+    &__section {
+      height: 62vh;
+    }
+  }
+
+  @media (max-width: 1550px) {
+    &__section {
+      height: 62vh;
+    }
+  }
+
+  @media (max-width: 1340px) {
+    &__section {
+      height: 58vh;
+    }
+  }
+
+  @media (max-width: 1220px) {
+    &__section {
+      height: 53vh;
+    }
+  }
+
+  @media (max-width: 1080px) {
+    &__section {
+      height: 51vh;
+    }
+
+    &__footer {
+      margin-top: 12%;
     }
   }
 }
